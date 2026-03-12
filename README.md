@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-# car-repair-finance-management-app
-=======
-# 🚗 Car Repair Manager - Professional React Application
+
+# Car Repair Manager - Professional React Application
 
 > A beautiful, modern, fully-responsive car repair management application built with React and Ant Design
 
@@ -245,12 +243,6 @@ This app demonstrates:
 
 ---
 
-## 📄 License
-
-MIT License - feel free to use this project
-
----
-
 ## 🎉 Status
 
 ✅ **Production Ready**  
@@ -261,23 +253,5 @@ MIT License - feel free to use this project
 
 **Version:** 1.0 | **React:** 19.2.3 | **Built:** January 2026
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
