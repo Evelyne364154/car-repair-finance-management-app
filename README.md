@@ -161,6 +161,39 @@ src/
 
 ---
 
+## 💾 Data Storage (No Database Required)
+
+### **How It Works**
+This app stores all repair records directly in your browser using **LocalStorage** - a built-in browser feature that saves data on your device.
+
+### **What Happens When You Add a Repair?**
+1. You fill out the form and click "Save"
+2. Data is saved to your browser's local storage
+3. The data persists even after closing the browser
+4. When you log back in, your records are loaded automatically
+
+### **Data Storage Details**
+- **Location:** Browser's local storage on your device
+- **Format:** JSON (converted to text)
+- **Persistence:** Stays saved until you clear browser cache
+- **Scope:** Each user has their own separate records
+- **Size Limit:** ~5-10MB (plenty for repair records)
+
+### **Key Features**
+✅ Data stays on your device (private & secure)  
+✅ Works completely offline after first load  
+✅ No server or database needed  
+✅ Lightning-fast data loading  
+✅ Automatic saving on every action  
+
+### **Anything I Should Know?**
+⚠️ Data is device-specific (different devices = different data)  
+⚠️ Clearing browser cache will delete data  
+⚠️ No automatic cloud backup  
+
+**Solution:** Export repairs to PDF regularly for backup!
+
+
 ## 🔄 Available Commands
 
 ```bash
