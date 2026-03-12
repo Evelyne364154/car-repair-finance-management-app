@@ -251,6 +251,25 @@ This app demonstrates:
 ✅ **Well Documented**  
 ✅ **Fully Responsive**  
 
+## 🚀 Deployment
+
+### **Live Application**
+The Car Repair Manager is deployed and live on **Netlify**:
+
+🔗 **Live Demo:** [https://car-repair-management.netlify.app](https://car-repair-management.netlify.app)
+
+### **Access Instructions**
+- **Desktop:** Open the link in any web browser
+- **Mobile:** Open the link on your phone's browser
+- **Mobile App-like:** On Android/iOS, tap the menu and select "Add to Home Screen" to create an app shortcut
+
+### **Deployment Method**
+The application is deployed using **Netlify Drop** with the following process:
+
+1. Build the production bundle:
+   ```bash
+   npm run build
+
 **Version:** 1.0 | **React:** 19.2.3 | **Built:** January 2026
 
 
