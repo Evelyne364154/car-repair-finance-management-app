@@ -1,0 +1,69 @@
+.bottom-nav {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 380px;
+    height: 80px;
+    background: #FFFFFF;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    /* Soft shadow */
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.nav-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    text-decoration: none;
+    color: #A0A0A0;
+    /* Inactive Color */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav-icon-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.nav-icon-container svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2px;
+}
+
+/* Active State */
+.nav-item.active .nav-icon-container {
+    background-color: #D4F64D;
+    /* Lime Green Accent */
+    color: #1A1C1E;
+    /* Dark Text/Icon Color */
+    box-shadow: 0 10px 20px rgba(212, 246, 77, 0.4);
+    transform: translateY(-5px);
+}
+
+.nav-item:hover:not(.active) {
+    color: #2D3436;
+}
+
+/* Hover effect on desktop */
+@media (min-width: 768px) {
+    .nav-item:hover .nav-icon-container {
+        background-color: #F8F9FA;
+    }
+}

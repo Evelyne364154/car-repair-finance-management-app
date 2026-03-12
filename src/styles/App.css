@@ -1,0 +1,493 @@
+/* ========================================
+   GLOBAL VARIABLES & RESET
+   ======================================== */
+:root {
+  --primary-color: #D4F64D;
+  /* Lime Green Accent */
+  --primary-text: #1A1C1E;
+  --secondary-text: #8E9296;
+  --bg-color: #F2F4F8;
+  /* Soft Light Gray */
+  --card-bg: #FFFFFF;
+  --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  --radius-xl: 32px;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+
+  /* Status Colors from design */
+  --card-blue-bg: #E1F0FF;
+  --card-blue-text: #4B96E8;
+  --card-yellow-bg: #FEF9E3;
+  --card-yellow-text: #F5C64F;
+  --card-green-bg: #E4F7E6;
+  --card-green-text: #66C87B;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--primary-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========================================
+     AUTH PAGES (Login/Signup)
+     ======================================== */
+
+.auth-container {
+  min-height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 450px;
+  min-height: 100vh;
+  /* Full screen mobile feel */
+  background: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: none;
+  /* Flat for mobile wrapper */
+}
+
+.car-image-container {
+  height: 45vh;
+  width: 100%;
+  background-color: #F0F0F0;
+  /* Placeholder grey */
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-car-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.auth-content {
+  flex: 1;
+  background: white;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  margin-top: -40px;
+  /* Overlap image */
+  padding: 40px 30px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-title {
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  text-align: center;
+  margin-bottom: 10px !important;
+  color: var(--primary-text);
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: var(--secondary-text);
+  font-size: 15px;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+/* Social Login Buttons */
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.social-btn {
+  height: 56px;
+  border-radius: 28px;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* Align text ? Design usually center */
+  padding: 0 20px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.social-btn:hover {
+  transform: scale(1.02);
+}
+
+.social-btn.google {
+  background: #363636;
+  /* Dark Grey/Black */
+  color: white;
+  justify-content: center;
+  /* Based on image "Continue With Google" */
+}
+
+.social-btn.apple {
+  background: white;
+  border: 1px solid #E0E0E0;
+  color: var(--primary-text);
+  justify-content: center;
+}
+
+.social-btn.facebook {
+  background: white;
+  border: 1px solid #E0E0E0;
+  color: var(--primary-text);
+  justify-content: center;
+}
+
+/* Form Styles */
+.auth-input {
+  height: 56px;
+  background: #F8F9FA;
+  border: none;
+  border-radius: 16px;
+  padding: 0 20px;
+  font-size: 16px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.auth-input:focus {
+  outline: 2px solid var(--primary-color);
+  background: white;
+}
+
+.auth-submit-btn {
+  height: 60px;
+  background: var(--primary-color);
+  border-radius: 30px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--primary-text);
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(212, 246, 77, 0.3);
+}
+
+/* ========================================
+     DASHBOARD (Soft UI Style)
+     ======================================== */
+
+.dashboard-container {
+  min-height: 100vh;
+  background: var(--bg-color);
+  padding: 24px;
+  padding-bottom: 120px;
+  /* Space for Nav */
+  max-width: 480px;
+  /* Limit width for desktop viewing to look mobile */
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-top: 10px;
+}
+
+/* Top Stats Cards */
+.top-stats-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  /* Hide scrollbar if needed */
+}
+
+/* Hide scrollbar */
+.top-stats-row::-webkit-scrollbar {
+  display: none;
+}
+
+.stat-card-small {
+  min-width: 100px;
+  flex: 1;
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.stat-card-small.blue {
+  background: var(--card-blue-bg);
+}
+
+.stat-card-small.yellow {
+  background: var(--card-yellow-bg);
+}
+
+.stat-card-small.green {
+  background: var(--card-green-bg);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #7E8494;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin: 0;
+}
+
+.stat-unit {
+  font-size: 12px;
+  font-weight: 500;
+  color: #999;
+  margin-left: 2px;
+}
+
+/* Center Gauge Area */
+.gauge-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.gauge-circle-outer {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.gauge-value-wrapper {
+  text-align: center;
+}
+
+.gauge-speed {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--primary-text);
+  line-height: 1;
+}
+
+.gauge-unit {
+  font-size: 14px;
+  color: var(--secondary-text);
+  margin-top: 5px;
+  display: block;
+}
+
+.fuel-indicator {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #F5C64F;
+  /* Orange/Yellow for fuel */
+  font-weight: 600;
+}
+
+/* Bottom Controls */
+.controls-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.control-btn {
+  background: white;
+  border-radius: 24px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: var(--card-shadow);
+  border: none;
+  cursor: pointer;
+}
+
+.control-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #F5F7FA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-text);
+  font-size: 20px;
+}
+
+.control-btn.active .control-icon-circle {
+  background: var(--primary-color);
+  color: var(--primary-text);
+}
+
+/* ========================================
+     REPAIR MANAGER
+     ======================================== */
+
+.app-container {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.app-header {
+  background: white !important;
+  padding: 0 24px !important;
+  height: 70px !important;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 0;
+  z-index: 900;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.app-title {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: var(--primary-text) !important;
+  margin: 0 !important;
+  margin-left: 12px !important;
+}
+
+.app-content {
+  padding: 24px;
+  padding-bottom: 120px;
+}
+
+.content-wrapper {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.main-card {
+  background: white;
+  border-radius: 24px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid #F0F0F0;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-text);
+  margin: 0;
+}
+
+/* Form inputs overrides */
+.repair-form input,
+.repair-form select,
+.repair-form textarea {
+  background: #F8F9FA;
+  border: 1px solid #EEEEEE;
+  border-radius: 12px;
+  padding: 14px;
+  color: var(--primary-text);
+  width: 100%;
+  margin-bottom: 16px;
+  font-family: inherit;
+}
+
+.repair-form input:focus {
+  border-color: var(--primary-color);
+  background: white;
+  outline: none;
+}
+
+.repair-form label {
+  color: var(--secondary-text);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.add-btn {
+  background: var(--primary-color);
+  color: var(--primary-text);
+  border: none;
+  border-radius: 30px;
+  padding: 14px 24px;
+  font-weight: 700;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(212, 246, 77, 0.4);
+  cursor: pointer;
+}
+
+/* Table overrides */
+.table-responsive {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #FAFAFA;
+  color: var(--secondary-text);
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 16px;
+  border-bottom: 1px solid #EEE;
+  text-align: left;
+}
+
+td {
+  padding: 16px;
+  border-bottom: 1px solid #F5F5F5;
+  color: var(--primary-text);
+  font-size: 14px;
+}
